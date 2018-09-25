@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Consumer : MonoBehaviour
 {
-    public ConsumableItem[] item;
+    public Usable[] item;
 
     public int selectedIndex;
 
@@ -12,7 +12,7 @@ public class Consumer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1))
         {
-            item[selectedIndex].Consume();
+            item[selectedIndex].Use();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && selectedIndex != 0)
